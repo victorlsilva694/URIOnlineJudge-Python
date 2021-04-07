@@ -24,12 +24,15 @@
     ***************************************************************************************************************************
 """
 def NumberBroken():
-    Num_quebrado = int(input("Digite o numero quebrado"))
+    Num_quebrado = int(input("Digite o numero quebrado: "))
 
-    if Num_quebrado > 1 and Num_quebrado < 10:
-        Num_Contrato = int(input("Digite numero do contrato"))
+    if Num_quebrado >= 1 and Num_quebrado < 11:
+        Num_Contrato = int(input("Digite numero do contrato: "))
         if Num_Contrato > 0 and Num_Contrato < 10100:
             Quebrado = str(Num_Contrato).replace(str(Num_quebrado), '')
             print(Quebrado)
+        if Num_Contrato == 0:
+            print('0')
+
 
 NumberBroken()
