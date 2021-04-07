@@ -14,15 +14,21 @@
 """
 
 def SentencaDancanteUpper():
-    StringDancante = input("Digite a sentença: ")
-    Range = len(StringDancante)
-    i = 0
-    for i in range(Range):
-        if i % 2 == 0:
-            par = StringDancante[i].upper()
-            print(par)
-        if i % 2 != 0:
-            impar = StringDancante[i].lower()
-            print(impar)
+    k = 0
+    Testes = int(input("Quantidade de testes: "))
+    for k in range(Testes):
+        StringDancante = input("Digite a sentença: ")
+        Range = len(StringDancante)
+        i = 0
+        Dance = []
+        for i in range(Range):
+            if i % 2 == 0:
+                par = StringDancante[i].upper()
+                Dance.append(par)
+            if i % 2 != 0:
+                impar = StringDancante[i].lower()
+                Dance.append(impar)
+        Dancando = ''.join(str(x) for x in Dance)
+        print(Dancando)
 
 SentencaDancanteUpper()
